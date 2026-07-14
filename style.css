@@ -1981,3 +1981,51 @@ html[data-theme="light"] .app-screenshot-frame {
         max-height: 420px;
     }
 }
+
+
+/* =========================================================
+   LOOPING SKILLS SHOWCASE
+========================================================= */
+.skills-loop-section {
+    margin: 40px auto 20px;
+    overflow: hidden;
+}
+
+.skills-marquee {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 28px;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.skills-track {
+    display: flex;
+    width: max-content;
+    gap: 18px;
+    animation: skillsScroll 28s linear infinite;
+}
+
+.skills-track:hover {
+    animation-play-state: paused;
+}
+
+.skills-track span {
+    padding: 14px 24px;
+    border: 1px solid var(--border-soft);
+    background: rgba(255,255,255,0.03);
+    border-radius: 999px;
+    color: var(--text-soft);
+    white-space: nowrap;
+    transition: .25s ease;
+}
+
+.skills-track span:hover {
+    color: var(--text-main);
+    border-color: var(--accent-one);
+    transform: translateY(-4px);
+}
+
+@keyframes skillsScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
