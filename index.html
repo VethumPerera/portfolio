@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-accent="purple">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vethum Perera software engineering portfolio featuring Android applications, web systems, distributed computing projects, university coursework and GitHub repositories.">
+    <title>Vethum Perera | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="background-effects" aria-hidden="true">
+        <div class="blur-orb orb-left"></div>
+        <div class="blur-orb orb-right"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="brand" aria-label="Go to home">
+                <span class="brand-mark">VP</span>
+                <span class="brand-name">Vethum Perera</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#github">GitHub</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <div class="theme-selector">
+                    <button class="icon-button selected-icon" id="paletteButton" type="button" aria-label="Open colour theme menu" aria-expanded="false">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3a9 9 0 0 0 0 18h1.2a1.6 1.6 0 0 0 1.2-2.7 1.7 1.7 0 0 1 1.3-2.8H17a4 4 0 0 0 4-4c0-4.7-4-8.5-9-8.5Z"></path>
+                            <circle cx="7.5" cy="10" r="1"></circle>
+                            <circle cx="10" cy="7" r="1"></circle>
+                            <circle cx="14" cy="7" r="1"></circle>
+                            <circle cx="16.5" cy="10" r="1"></circle>
+                        </svg>
+                    </button>
+
+                    <div class="theme-panel" id="themePanel">
+                        <p>Select Theme</p>
+
+                        <button class="theme-choice" data-accent-option="sunset" type="button">
+                            <span class="theme-dot sunset-dot"></span>
+                            Blue Orange
+                        </button>
+
+                        <button class="theme-choice" data-accent-option="gold" type="button">
+                            <span class="theme-dot gold-dot"></span>
+                            Golden
+                        </button>
+
+                        <button class="theme-choice" data-accent-option="cyan" type="button">
+                            <span class="theme-dot cyan-dot"></span>
+                            Cyan
+                        </button>
+
+                        <button class="theme-choice" data-accent-option="purple" type="button">
+                            <span class="theme-dot purple-dot"></span>
+                            Purple
+                        </button>
+
+                        <button class="theme-choice" data-accent-option="emerald" type="button">
+                            <span class="theme-dot emerald-dot"></span>
+                            Emerald
+                        </button>
+
+                        <button class="theme-choice" data-accent-option="rose" type="button">
+                            <span class="theme-dot rose-dot"></span>
+                            Rose
+                        </button>
+                    </div>
+                </div>
+
+                <button class="icon-button" id="themeToggle" type="button" aria-label="Switch colour mode">
+                    <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.7 6.7 0 0 0 9.8 9.8Z"></path>
+                    </svg>
+                    <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="M4.9 4.9 6.3 6.3"></path>
+                        <path d="M17.7 17.7 19.1 19.1"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="M6.3 17.7 4.9 19.1"></path>
+                        <path d="M19.1 4.9 17.7 6.3"></path>
+                    </svg>
+                </button>
+
+                <a href="#projects" class="nav-pill preview-pill">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    preview
+                </a>
+
+                <a href="VethumPerera_CV.pdf" class="nav-pill download-pill" download>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 3v12"></path>
+                        <path d="m7 10 5 5 5-5"></path>
+                        <path d="M5 21h14"></path>
+                    </svg>
+                    download
+                </a>
+
+                <a href="https://github.com/VethumPerera" class="round-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 19c-4.3 1.4-4.3-2.1-6-2.5"></path>
+                        <path d="M15 22v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.7a5.2 5.2 0 0 0-1.4-3.6 4.9 4.9 0 0 0-.1-3.6s-1.1-.3-3.7 1.4a12.7 12.7 0 0 0-6.8 0C5.6.3 4.5.6 4.5.6a4.9 4.9 0 0 0-.1 3.6A5.2 5.2 0 0 0 3 7.8c0 5.2 3.1 6.4 6.1 6.7a3.4 3.4 0 0 0-.9 2.6V22"></path>
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/in/vethum-perera-3b71a5280/" class="round-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+
+                <span class="work-status">
+                    <span></span>
+                    open to work
+                </span>
+
+                <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home / About Hero -->
+        <header class="hero section-shell" id="home">
+            <section class="hero-left reveal" id="about">
+                <p class="eyebrow">About — where ideas meet code</p>
+
+                <h1>
+                    Hi, I'm Vethum Perera.
+                    <span class="gradient-word">building software projects</span>
+                </h1>
+
+                <p class="hero-role">
+                    Software Engineering Undergraduate
+                </p>
+
+                <div class="hero-copy">
+                    <p>
+                        I am a Software Engineering undergraduate at Curtin Colombo with a strong interest in software engineering, Android development, distributed systems, cloud technologies and practical user-focused applications.
+                    </p>
+
+                    <p>
+                        I enjoy building practical projects that help me improve my programming, UI design, database, API integration, client-server communication, teamwork and problem-solving skills through real software development work.
+                    </p>
+                </div>
+
+                <div class="skill-pills">
+                    <span>Java</span>
+                    <span>Kotlin</span>
+                    <span>C</span>
+                    <span>C#</span>
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Android Studio</span>
+                    <span>ASP.NET Core</span>
+                    <span>WPF/WCF</span>
+                    <span>Room DB</span>
+                    <span>Firebase</span>
+                    <span>Git/GitHub</span>
+                    <span>Cloud Computing</span>
+                    <span>Figma</span>
+                    <span>UI/UX</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="big-button primary-action">
+                        view projects
+                        <span>→</span>
+                    </a>
+
+                    <a href="#education" class="big-button secondary-action">
+                        my education
+                    </a>
+                </div>
+            </section>
+
+            <section class="hero-right reveal">
+                <div class="available-tag">
+                    <span></span>
+                    available
+                </div>
+
+                <div class="terminal-window">
+                    <div class="terminal-top">
+                        <div class="terminal-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p>terminal://vethum</p>
+                    </div>
+
+                    <div class="ascii-box">
+<pre>
+██╗   ██╗██████╗ 
+██║   ██║██╔══██╗
+██║   ██║██████╔╝
+╚██╗ ██╔╝██╔═══╝ 
+ ╚████╔╝ ██║     
+  ╚═══╝  ╚═╝     
+</pre>
+                        <p class="terminal-name">Perera</p>
+                        <ul>
+                            <li>&gt; projects shipped: 6+</li>
+                            <li>&gt; status: building</li>
+                            <li>&gt; stack: android / web / distributed systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="terminal-date">2026</div>
+            </section>
+        </header>
+
+        <!-- Education -->
+        <section class="section section-shell" id="education">
+            <p class="eyebrow reveal">Education</p>
+            <h2 class="section-title reveal">Where I've <span>studied</span></h2>
+
+            <article class="education-card reveal">
+                <div class="education-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M22 10 12 5 2 10l10 5 10-5Z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                </div>
+
+                <div>
+                    <div class="card-top-line">
+                        <div>
+                            <h3>Bachelor of Computing, Software Engineering</h3>
+                            <p>Curtin University, Colombo</p>
+                        </div>
+
+                        <span>Jul 2023 — Present</span>
+                    </div>
+
+                    <ul class="feature-list">
+                        <li>Coursework includes Android development, data structures and algorithms, UNIX systems programming, cloud computing, software architecture, databases, requirements engineering and capstone project development.</li>
+                        <li>Building a portfolio focused on university projects, Android applications and software engineering practice.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="education-card reveal">
+                <div class="education-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-1.5Z"></path>
+                        <path d="M8 7h7"></path>
+                        <path d="M8 11h7"></path>
+                        <path d="M8 15h5"></path>
+                    </svg>
+                </div>
+
+                <div>
+                    <div class="card-top-line">
+                        <div>
+                            <h3>School Education and Advanced Level Studies</h3>
+                            <p>Lyceum International School</p>
+                        </div>
+
+                        <span>2009 — 2023</span>
+                    </div>
+
+                    <ul class="feature-list">
+                        <li>Completed school education and Advanced Level studies before continuing into Software Engineering.</li>
+                        <li>Built a strong academic foundation while developing discipline, communication and teamwork skills.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="education-card reveal">
+                <div class="education-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8 21h8"></path>
+                        <path d="M12 17v4"></path>
+                        <path d="M7 4h10v4a5 5 0 0 1-10 0V4Z"></path>
+                        <path d="M5 4H3v3a3 3 0 0 0 3 3h1"></path>
+                        <path d="M19 4h2v3a3 3 0 0 1-3 3h-1"></path>
+                    </svg>
+                </div>
+
+                <div>
+                    <div class="card-top-line">
+                        <div>
+                            <h3>Badminton Captaincy and Leadership</h3>
+                            <p>Leadership / Sports Activity</p>
+                        </div>
+
+                        <span>Achievement</span>
+                    </div>
+
+                    <ul class="feature-list">
+                        <li>Developed leadership, responsibility and teamwork through badminton captaincy.</li>
+                        <li>Applies the same discipline, communication and team-focused mindset to software projects and group coursework.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- Projects -->
+        <section class="section section-shell" id="projects">
+            <div class="section-heading-row">
+                <div>
+                    <p class="eyebrow reveal">Projects</p>
+                    <h2 class="section-title reveal">Selected Work</h2>
+                    <p class="section-subtitle reveal">Click a project card to expand and view screenshots, feature walkthroughs and project details.</p>
+                </div>
+
+                <div class="filter-tabs reveal" aria-label="Project filters">
+                    <button type="button" class="active">All</button>
+                    <button type="button">Shipped</button>
+                    <button type="button">In Progress</button>
+                    <button type="button">Archived</button>
+                </div>
+            </div>
+
+            <div class="projects-stack">
+                <!-- Tourist Attractions -->
+                <article class="showcase-card reveal" data-project-card>
+                    <button class="project-summary" type="button" aria-expanded="false">
+                        <div class="project-bg tourist-bg"></div>
+                        <div class="project-overlay"></div>
+
+                        <div class="project-summary-content">
+                            <div class="project-labels">
+                                <span class="featured-label">Featured</span>
+                                <span class="shipped-label"><span></span> completed</span>
+                            </div>
+
+                            <p class="project-date">2026</p>
+                            <p class="project-owner">Android Application</p>
+
+                            <h3>Tourist Attractions</h3>
+
+                            <p>Android application for exploring tourist destinations in Sri Lanka with dynamic search, category filtering, favourites, detail screens and a browser-based Learn More option.</p>
+
+                            <div class="project-tags">
+                                <span>Kotlin</span>
+                                <span>Android Studio</span>
+                                <span>XML</span>
+                                <span>RecyclerView</span>
+                                <span>ViewModel</span>
+                                <span>LiveData</span>
+                            </div>
+
+                            <small>Click for details & screenshots</small>
+                        </div>
+
+                        <span class="project-arrow">⌄</span>
+                    </button>
+
+                    <div class="project-details">
+                        <div class="details-inner">
+                            <p class="detail-heading">Screenshots</p>
+
+                            <div class="project-gallery" data-project-gallery>
+                                <figure class="screenshot-main app-screenshot-frame phone-frame">
+                                    <img
+                                        class="main-project-image"
+                                        src="images/Projects/tourist-attractions/tourist-01-home.png"
+                                        alt="Tourist Attractions home screen showing a list of popular destinations in Sri Lanka"
+                                    >
+                                    <figcaption class="main-project-caption">Home screen listing popular destinations with search, category filters and favourite controls.</figcaption>
+                                </figure>
+
+                                <div class="screenshot-strip image-strip" aria-label="Tourist Attractions screenshot gallery">
+                                    <button class="active" type="button" data-gallery-image="images/Projects/tourist-attractions/tourist-01-home.png" data-gallery-caption="Home screen listing popular destinations with search, category filters and favourite controls.">
+                                        <img src="images/Projects/tourist-attractions/tourist-01-home.png" alt="Tourist Attractions home screen showing a list of popular destinations in Sri Lanka">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/tourist-attractions/tourist-02-search-yala.png" data-gallery-caption="Dynamic search filters the destination list as the user types.">
+                                        <img src="images/Projects/tourist-attractions/tourist-02-search-yala.png" alt="Tourist Attractions search result for Yala">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/tourist-attractions/tourist-03-search-beaches.png" data-gallery-caption="Search and category filtering narrow the list to matching beach destinations.">
+                                        <img src="images/Projects/tourist-attractions/tourist-03-search-beaches.png" alt="Tourist Attractions beaches search result">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/tourist-attractions/tourist-04-category-cultural.png" data-gallery-caption="Category filters allow users to browse destinations such as Cultural Sites.">
+                                        <img src="images/Projects/tourist-attractions/tourist-04-category-cultural.png" alt="Tourist Attractions cultural sites category filter">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/tourist-attractions/tourist-05-detail-view.png" data-gallery-caption="Tapping a destination opens a detail view with description, favourite status and action buttons.">
+                                        <img src="images/Projects/tourist-attractions/tourist-05-detail-view.png" alt="Tourist Attractions destination detail view">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/tourist-attractions/tourist-06-favourite-list.png" data-gallery-caption="Heart toggles update instantly in the list, clearly showing saved favourite destinations.">
+                                        <img src="images/Projects/tourist-attractions/tourist-06-favourite-list.png" alt="Tourist Attractions favourite hearts in destination list">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/tourist-attractions/tourist-07-favourites-filter.png" data-gallery-caption="The favourites filter shows only the destinations saved by the user.">
+                                        <img src="images/Projects/tourist-attractions/tourist-07-favourites-filter.png" alt="Tourist Attractions favourites filter screen">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="key-features-box">
+                                <p class="detail-heading">Feature Walkthrough</p>
+                                <ul>
+                                    <li>Home screen lists all destinations.</li>
+                                    <li>Search bar filters results dynamically as the user types.</li>
+                                    <li>Category chips narrow the list, such as Beaches or Cultural Sites.</li>
+                                    <li>Tapping an item opens a destination detail screen.</li>
+                                    <li>Learn More opens a Google Search result for the selected destination.</li>
+                                    <li>Heart button toggles favourites and updates instantly in the list.</li>
+                                    <li>Favourite filter displays only saved destinations.</li>
+                                </ul>
+                            </div>
+
+                            <div class="source-row">
+                                <a href="https://github.com/VethumPerera/tourist-attractions-android" target="_blank" rel="noopener noreferrer">source ↗</a>
+                                <span>Android app preview shown through screenshots</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PocketLibrary -->
+                <article class="showcase-card reveal" data-project-card>
+                    <button class="project-summary" type="button" aria-expanded="false">
+                        <div class="project-bg library-bg"></div>
+                        <div class="project-overlay"></div>
+
+                        <div class="project-summary-content">
+                            <div class="project-labels">
+                                <span class="featured-label">Featured</span>
+                                <span class="shipped-label"><span></span> completed</span>
+                            </div>
+
+                            <p class="project-date">2026</p>
+                            <p class="project-owner">Android Application</p>
+
+                            <h3>PocketLibrary</h3>
+
+                            <p>Offline-first personal library app for searching books online, saving books locally, adding manual entries, editing saved books, adding personal photos and syncing data with Firebase.</p>
+
+                            <div class="project-tags">
+                                <span>Kotlin</span>
+                                <span>Android Studio</span>
+                                <span>Room DB</span>
+                                <span>Firebase</span>
+                                <span>Volley</span>
+                                <span>Picasso</span>
+                                <span>RecyclerView</span>
+                                <span>ViewModel</span>
+                            </div>
+
+                            <small>Click for details & screenshots</small>
+                        </div>
+
+                        <span class="project-arrow">⌄</span>
+                    </button>
+
+                    <div class="project-details">
+                        <div class="details-inner">
+                            <p class="detail-heading">Screenshots</p>
+
+                            <div class="project-gallery" data-project-gallery>
+                                <figure class="screenshot-main app-screenshot-frame library-frame">
+                                    <img
+                                        class="main-project-image"
+                                        src="images/Projects/pocket-library/pocket-01-online-api-search.png"
+                                        alt="PocketLibrary online API search results with book covers"
+                                    >
+                                    <figcaption class="main-project-caption">Online API search results are fetched dynamically and displayed with book cover images.</figcaption>
+                                </figure>
+
+                                <div class="screenshot-strip image-strip" aria-label="PocketLibrary screenshot gallery">
+                                    <button class="active" type="button" data-gallery-image="images/Projects/pocket-library/pocket-01-online-api-search.png" data-gallery-caption="Online API search results are fetched dynamically and displayed with book cover images.">
+                                        <img src="images/Projects/pocket-library/pocket-01-online-api-search.png" alt="PocketLibrary online API search results with book covers">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/pocket-library/pocket-02-my-library-search.png" data-gallery-caption="Offline My Library mode shows locally saved books and allows searching within the saved collection.">
+                                        <img src="images/Projects/pocket-library/pocket-02-my-library-search.png" alt="PocketLibrary offline My Library mode">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/pocket-library/pocket-03-camera-permission.png" data-gallery-caption="Scoped runtime permission request appears when the user chooses Add Photo.">
+                                        <img src="images/Projects/pocket-library/pocket-03-camera-permission.png" alt="PocketLibrary camera permission request">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/pocket-library/pocket-04-edited-book-photo.png" data-gallery-caption="Saved books can be edited and updated with personal photos.">
+                                        <img src="images/Projects/pocket-library/pocket-04-edited-book-photo.png" alt="PocketLibrary edited book with personal photo">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/pocket-library/pocket-05-firebase-sync.png" data-gallery-caption="Firebase synchronization confirms when favourite or saved book data is synced.">
+                                        <img src="images/Projects/pocket-library/pocket-05-firebase-sync.png" alt="PocketLibrary Firebase synchronization toast">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/pocket-library/pocket-06-firebase-manual-entry.png" data-gallery-caption="Manual entries are added to Firebase with fields such as title, author, year and manual entry status.">
+                                        <img src="images/Projects/pocket-library/pocket-06-firebase-manual-entry.png" alt="PocketLibrary manual entry in Firebase database">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="key-features-box">
+                                <p class="detail-heading">Feature Walkthrough</p>
+                                <ul>
+                                    <li>Online API search fetches book results dynamically and displays cover images.</li>
+                                    <li>My Library mode allows users to view and search locally saved books.</li>
+                                    <li>Users can manually add books when they are not found through the API.</li>
+                                    <li>Saved books can be edited, deleted, shared and updated with personal photos.</li>
+                                    <li>Add Photo uses a scoped runtime camera permission request.</li>
+                                    <li>Room database supports local storage while Firebase synchronizes saved data.</li>
+                                    <li>Firebase records manual entries and synced favourite/book information.</li>
+                                </ul>
+                            </div>
+
+                            <div class="source-row">
+                                <a href="https://github.com/VethumPerera/pocket-library-android" target="_blank" rel="noopener noreferrer">source ↗</a>
+                                <span>Android app preview shown through screenshots</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Escape Game -->
+                <article class="showcase-card reveal" data-project-card>
+                    <button class="project-summary" type="button" aria-expanded="false">
+                        <div class="project-bg usp-bg"></div>
+                        <div class="project-overlay"></div>
+
+                        <div class="project-summary-content">
+                            <div class="project-labels">
+                                <span class="featured-label">Featured</span>
+                                <span class="shipped-label"><span></span> completed</span>
+                            </div>
+
+                            <p class="project-date">2026</p>
+                            <p class="project-owner">UNIX Systems Programming</p>
+
+                            <h3>Escape Game</h3>
+
+                            <p>ASCII terminal-based game written in C where the player moves through a map, avoids independently moving enemies and reaches the goal using keyboard controls.</p>
+
+                            <div class="project-tags">
+                                <span>C</span>
+                                <span>Linux</span>
+                                <span>Makefile</span>
+                                <span>System Calls</span>
+                                <span>Terminal I/O</span>
+                                <span>fork()</span>
+                                <span>flock()</span>
+                                <span>nanosleep()</span>
+                            </div>
+
+                            <small>Click for details & screenshots</small>
+                        </div>
+
+                        <span class="project-arrow">⌄</span>
+                    </button>
+
+                    <div class="project-details">
+                        <div class="details-inner">
+                            <p class="detail-heading">Screenshots</p>
+
+                            <div class="project-gallery" data-project-gallery>
+                                <figure class="screenshot-main app-screenshot-frame terminal-frame">
+                                    <img
+                                        class="main-project-image"
+                                        src="images/Projects/usp-escape-game/usp-01-start-screen.png"
+                                        alt="USP Escape Game start screen showing the ASCII map and movement instructions"
+                                    >
+                                    <figcaption class="main-project-caption">Start screen after running ./escape map.txt, displaying the ASCII map, player, enemies, goal and movement controls.</figcaption>
+                                </figure>
+
+                                <div class="screenshot-strip image-strip" aria-label="Escape Game screenshot gallery">
+                                    <button class="active" type="button" data-gallery-image="images/Projects/usp-escape-game/usp-01-start-screen.png" data-gallery-caption="Start screen after running ./escape map.txt, displaying the ASCII map, player, enemies, goal and movement controls.">
+                                        <img src="images/Projects/usp-escape-game/usp-01-start-screen.png" alt="USP Escape Game start screen showing the ASCII map and movement instructions">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/usp-escape-game/usp-02-player-wins.png" data-gallery-caption="Player reaches the goal and the game shows the winning outcome before quitting.">
+                                        <img src="images/Projects/usp-escape-game/usp-02-player-wins.png" alt="USP Escape Game player wins outcome">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/usp-escape-game/usp-03-wolf-game-over.png" data-gallery-caption="Losing state triggered when the wolf reaches the player and ends the game.">
+                                        <img src="images/Projects/usp-escape-game/usp-03-wolf-game-over.png" alt="USP Escape Game wolf game over outcome">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/usp-escape-game/usp-04-snake-game-over.png" data-gallery-caption="Losing state triggered when the snake reaches the player and ends the game.">
+                                        <img src="images/Projects/usp-escape-game/usp-04-snake-game-over.png" alt="USP Escape Game snake game over outcome">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="key-features-box">
+                                <p class="detail-heading">Feature Walkthrough</p>
+                                <ul>
+                                    <li>Runs from the terminal using the command ./escape map.txt.</li>
+                                    <li>Reads a map text file and builds a playable 2D ASCII map from numeric object values.</li>
+                                    <li>Displays map borders, walls, player, goal, snake and wolf using required terminal characters.</li>
+                                    <li>Uses immediate keyboard movement controls with w, s, a and d for player movement.</li>
+                                    <li>Snake and wolf move independently using process logic and delayed movement timing.</li>
+                                    <li>Game ends when the player reaches the goal or when an enemy catches the player.</li>
+                                    <li>Private source code because this was completed as an assessed university assignment.</li>
+                                </ul>
+                            </div>
+
+                            <div class="source-row private-source-row">
+                                <span>Private repository</span>
+                                <span>Project preview shown through terminal screenshots</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Mortal Kombat X Online Gaming Lobby -->
+                <article class="showcase-card reveal" data-project-card>
+                    <button class="project-summary" type="button" aria-expanded="false">
+                        <div class="project-bg mkx-bg"></div>
+                        <div class="project-overlay"></div>
+
+                        <div class="project-summary-content">
+                            <div class="project-labels">
+                                <span class="featured-label">Featured</span>
+                                <span class="shipped-label"><span></span> completed</span>
+                            </div>
+
+                            <p class="project-date">2025</p>
+                            <p class="project-owner">Distributed Computing / WPF + WCF</p>
+
+                            <h3>Mortal Kombat X Online Gaming Lobby</h3>
+
+                            <p>A distributed client-server gaming lobby built with C#, WPF and WCF, allowing players to log in, create or join rooms, chat, send private messages, share files and test duplex client communication.</p>
+
+                            <div class="project-tags">
+                                <span>C#</span>
+                                <span>.NET Framework</span>
+                                <span>WPF</span>
+                                <span>WCF</span>
+                                <span>Client-Server</span>
+                                <span>Multithreading</span>
+                                <span>File Sharing</span>
+                                <span>Duplex WCF</span>
+                            </div>
+
+                            <small>Click for details & screenshots</small>
+                        </div>
+
+                        <span class="project-arrow">⌄</span>
+                    </button>
+
+                    <div class="project-details">
+                        <div class="details-inner">
+                            <p class="detail-heading">Screenshots</p>
+
+                            <div class="project-gallery" data-project-gallery>
+                                <figure class="screenshot-main app-screenshot-frame desktop-frame">
+                                    <img
+                                        class="main-project-image"
+                                        src="images/Projects/mkx-gaming-lobby/mkx-01-login-screen.png"
+                                        alt="Mortal Kombat X lobby login screen"
+                                    >
+                                    <figcaption class="main-project-caption">Login screen where a player enters credentials before joining the gaming lobby.</figcaption>
+                                </figure>
+
+                                <div class="screenshot-strip image-strip" aria-label="Mortal Kombat X Online Gaming Lobby screenshot gallery">
+                                    <button class="active" type="button" data-gallery-image="images/Projects/mkx-gaming-lobby/mkx-01-login-screen.png" data-gallery-caption="Login screen where a player enters credentials before joining the gaming lobby.">
+                                        <img src="images/Projects/mkx-gaming-lobby/mkx-01-login-screen.png" alt="Mortal Kombat X lobby login screen">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/mkx-gaming-lobby/mkx-02-lobby-selection.png" data-gallery-caption="Lobby selection screen where players can join an existing room or create a new lobby room.">
+                                        <img src="images/Projects/mkx-gaming-lobby/mkx-02-lobby-selection.png" alt="Mortal Kombat X lobby room selection screen">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/mkx-gaming-lobby/mkx-03-room-chat-file-share.png" data-gallery-caption="Lobby room interface supports public chat, file sharing, player list and room controls.">
+                                        <img src="images/Projects/mkx-gaming-lobby/mkx-03-room-chat-file-share.png" alt="Mortal Kombat X lobby room chat and file sharing screen">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/mkx-gaming-lobby/mkx-04-private-chat-window.png" data-gallery-caption="Private chat opens in a separate window for direct messages between players.">
+                                        <img src="images/Projects/mkx-gaming-lobby/mkx-04-private-chat-window.png" alt="Mortal Kombat X private chat window">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/mkx-gaming-lobby/mkx-05-username-taken-error.png" data-gallery-caption="Validation prevents duplicate usernames from joining the system at the same time.">
+                                        <img src="images/Projects/mkx-gaming-lobby/mkx-05-username-taken-error.png" alt="Mortal Kombat X username already taken error">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/mkx-gaming-lobby/mkx-06-message-file-sharing.png" data-gallery-caption="Room view showing active chat messages, direct messages and shared file entries.">
+                                        <img src="images/Projects/mkx-gaming-lobby/mkx-06-message-file-sharing.png" alt="Mortal Kombat X chat and file sharing demonstration">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/mkx-gaming-lobby/mkx-07-duplex-client.png" data-gallery-caption="Duplex client interface demonstrates the additional real-time client implementation.">
+                                        <img src="images/Projects/mkx-gaming-lobby/mkx-07-duplex-client.png" alt="Mortal Kombat X duplex client window">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/mkx-gaming-lobby/mkx-08-solution-files-top.png" data-gallery-caption="Visual Studio solution structure showing client projects, WPF windows and shared library files.">
+                                        <img src="images/Projects/mkx-gaming-lobby/mkx-08-solution-files-top.png" alt="Mortal Kombat X Visual Studio solution files top section">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/mkx-gaming-lobby/mkx-09-solution-files-server.png" data-gallery-caption="Visual Studio solution structure showing contracts and server-side service files.">
+                                        <img src="images/Projects/mkx-gaming-lobby/mkx-09-solution-files-server.png" alt="Mortal Kombat X Visual Studio server files">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="key-features-box">
+                                <p class="detail-heading">Feature Walkthrough</p>
+                                <ul>
+                                    <li>Unique username login validation prevents duplicate active players.</li>
+                                    <li>Players can create, join and leave lobby rooms.</li>
+                                    <li>Room chat distributes messages to users in the same lobby.</li>
+                                    <li>Private messages open in a separate chat window with conversation history.</li>
+                                    <li>File sharing allows lobby users to share and open files.</li>
+                                    <li>Background polling keeps room data updated without constant manual refresh.</li>
+                                    <li>Duplex WCF client demonstrates server-pushed updates.</li>
+                                    <li>Solution includes separate client, duplex client, contracts/library and server projects.</li>
+                                </ul>
+                            </div>
+
+                            <div class="source-row private-source-row">
+                                <span>Coursework preview only</span>
+                                <span>Source kept private; screenshots show the completed system walkthrough</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Banking Web Application & API -->
+                <article class="showcase-card reveal" data-project-card>
+                    <button class="project-summary" type="button" aria-expanded="false">
+                        <div class="project-bg banking-bg"></div>
+                        <div class="project-overlay"></div>
+
+                        <div class="project-summary-content">
+                            <div class="project-labels">
+                                <span class="featured-label">Featured</span>
+                                <span class="shipped-label"><span></span> completed</span>
+                            </div>
+
+                            <p class="project-date">2025</p>
+                            <p class="project-owner">ASP.NET Core / Banking Platform</p>
+
+                            <h3>Banking Web Application & API</h3>
+
+                            <p>A two-layer banking system combining an ASP.NET Core bank data web service with a separate web application for user dashboards, admin dashboards, profile management, transaction history and money transfer.</p>
+
+                            <div class="project-tags">
+                                <span>ASP.NET Core</span>
+                                <span>C#</span>
+                                <span>MVC</span>
+                                <span>SQLite</span>
+                                <span>REST API</span>
+                                <span>Entity Framework</span>
+                                <span>JavaScript</span>
+                                <span>Admin Dashboard</span>
+                            </div>
+
+                            <small>Click for details & screenshots</small>
+                        </div>
+
+                        <span class="project-arrow">⌄</span>
+                    </button>
+
+                    <div class="project-details">
+                        <div class="details-inner">
+                            <p class="detail-heading">Screenshots</p>
+
+                            <div class="project-gallery" data-project-gallery>
+                                <figure class="screenshot-main app-screenshot-frame desktop-frame">
+                                    <img
+                                        class="main-project-image"
+                                        src="images/Projects/banking-web-app-api/bank-01-service-home.png"
+                                        alt="Bank Data Service home page"
+                                    >
+                                    <figcaption class="main-project-caption">Bank data service home page running locally as the web service layer.</figcaption>
+                                </figure>
+
+                                <div class="screenshot-strip image-strip" aria-label="Banking Web Application & API screenshot gallery">
+                                    <button class="active" type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-01-service-home.png" data-gallery-caption="Bank data service home page running locally as the web service layer.">
+                                        <img src="images/Projects/banking-web-app-api/bank-01-service-home.png" alt="Bank Data Service home page">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-02-service-privacy.png" data-gallery-caption="Default privacy route confirms the service web app navigation and route handling.">
+                                        <img src="images/Projects/banking-web-app-api/bank-02-service-privacy.png" alt="Bank Data Service privacy page">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-03-service-files.png" data-gallery-caption="Visual Studio solution structure showing controllers, models, migrations, database files and program setup for the service.">
+                                        <img src="images/Projects/banking-web-app-api/bank-03-service-files.png" alt="Bank Data Service Visual Studio file structure">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-04-user-login.png" data-gallery-caption="User login flow validates credentials and confirms successful login.">
+                                        <img src="images/Projects/banking-web-app-api/bank-04-user-login.png" alt="Banking web application user login success">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-05-user-profile-update.png" data-gallery-caption="User dashboard allows personal profile details to be updated successfully.">
+                                        <img src="images/Projects/banking-web-app-api/bank-05-user-profile-update.png" alt="Banking web application user profile update">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-06-money-transfer.png" data-gallery-caption="User account dashboard shows balance, transaction history and money transfer form.">
+                                        <img src="images/Projects/banking-web-app-api/bank-06-money-transfer.png" alt="Banking web application money transfer screen">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-07-admin-login.png" data-gallery-caption="Admin login flow provides separate access for administrative users.">
+                                        <img src="images/Projects/banking-web-app-api/bank-07-admin-login.png" alt="Banking web application admin login">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-08-admin-dashboard.png" data-gallery-caption="Admin dashboard shows admin profile information and update options.">
+                                        <img src="images/Projects/banking-web-app-api/bank-08-admin-dashboard.png" alt="Banking web application admin dashboard">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-09-create-user-validation.png" data-gallery-caption="Validation catches duplicate profile creation attempts and shows an error message.">
+                                        <img src="images/Projects/banking-web-app-api/bank-09-create-user-validation.png" alt="Banking web application create user validation">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-10-user-management.png" data-gallery-caption="Admin user management lists user accounts with edit, deactivate and reset password actions.">
+                                        <img src="images/Projects/banking-web-app-api/bank-10-user-management.png" alt="Banking web application user management table">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-11-invalid-admin-login.png" data-gallery-caption="Invalid credentials are detected when a non-admin or wrong account attempts admin login.">
+                                        <img src="images/Projects/banking-web-app-api/bank-11-invalid-admin-login.png" alt="Banking web application invalid admin login">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/banking-web-app-api/bank-12-web-app-files.png" data-gallery-caption="Visual Studio structure for the presentation web app showing controllers, JavaScript, CSS, views and models.">
+                                        <img src="images/Projects/banking-web-app-api/bank-12-web-app-files.png" alt="Banking web application file structure">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="key-features-box">
+                                <p class="detail-heading">Feature Walkthrough</p>
+                                <ul>
+                                    <li>Bank data web service manages accounts, transactions and user profiles.</li>
+                                    <li>SQLite database stores banking data with seeded test records.</li>
+                                    <li>User dashboard supports login, profile updates and account summary viewing.</li>
+                                    <li>Transaction history can be viewed and filtered.</li>
+                                    <li>Money transfer form supports deposit/withdrawal style operations between accounts.</li>
+                                    <li>Admin dashboard supports profile management and system administration.</li>
+                                    <li>Admin user management can search users and perform edit, deactivate and password reset actions.</li>
+                                    <li>Validation and error messages handle duplicate profiles and invalid login attempts.</li>
+                                </ul>
+                            </div>
+
+                            <div class="source-row private-source-row">
+                                <span>Coursework preview only</span>
+                                <span>Part A and Part B source will be handled separately later</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PeerHub – Peer-to-Peer Task Sharing System -->
+                <article class="showcase-card reveal" data-project-card>
+                    <button class="project-summary" type="button" aria-expanded="false">
+                        <div class="project-bg peerhub-bg"></div>
+                        <div class="project-overlay"></div>
+
+                        <div class="project-summary-content">
+                            <div class="project-labels">
+                                <span class="featured-label">Featured</span>
+                                <span class="shipped-label"><span></span> completed</span>
+                            </div>
+
+                            <p class="project-date">2025</p>
+                            <p class="project-owner">Distributed Computing / P2P System</p>
+
+                            <h3>PeerHub – Peer-to-Peer Task Sharing System</h3>
+
+                            <p>A hybrid distributed computing system where peer clients register with a web service, discover other clients, submit Python-based jobs, execute tasks through a worker client and report peer/job status to a web dashboard.</p>
+
+                            <div class="project-tags">
+                                <span>ASP.NET Core</span>
+                                <span>C#</span>
+                                <span>.NET Remoting</span>
+                                <span>IronPython</span>
+                                <span>REST API</span>
+                                <span>SQLite</span>
+                                <span>Peer-to-Peer</span>
+                                <span>Background Tasks</span>
+                            </div>
+
+                            <small>Click for details & screenshots</small>
+                        </div>
+
+                        <span class="project-arrow">⌄</span>
+                    </button>
+
+                    <div class="project-details">
+                        <div class="details-inner">
+                            <p class="detail-heading">Screenshots</p>
+
+                            <div class="project-gallery" data-project-gallery>
+                                <figure class="screenshot-main app-screenshot-frame desktop-frame">
+                                    <img
+                                        class="main-project-image"
+                                        src="images/Projects/peerhub-p2p-task-sharing/peerhub-01-dashboard-single-peer.png"
+                                        alt="PeerHub dashboard showing one registered peer"
+                                    >
+                                    <figcaption class="main-project-caption">Peer status board showing a registered peer with address, port, completed job count and last seen time.</figcaption>
+                                </figure>
+
+                                <div class="screenshot-strip image-strip" aria-label="PeerHub – Peer-to-Peer Task Sharing System screenshot gallery">
+                                    <button class="active" type="button" data-gallery-image="images/Projects/peerhub-p2p-task-sharing/peerhub-01-dashboard-single-peer.png" data-gallery-caption="Peer status board showing a registered peer with address, port, completed job count and last seen time.">
+                                        <img src="images/Projects/peerhub-p2p-task-sharing/peerhub-01-dashboard-single-peer.png" alt="PeerHub dashboard showing one registered peer">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/peerhub-p2p-task-sharing/peerhub-02-dashboard-multiple-peers.png" data-gallery-caption="Dashboard after adding test peers, showing multiple registered peer nodes.">
+                                        <img src="images/Projects/peerhub-p2p-task-sharing/peerhub-02-dashboard-multiple-peers.png" alt="PeerHub dashboard showing multiple peers">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/peerhub-p2p-task-sharing/peerhub-03-server-files-top.png" data-gallery-caption="Server-side Visual Studio structure showing controllers, data context, models, services and views.">
+                                        <img src="images/Projects/peerhub-p2p-task-sharing/peerhub-03-server-files-top.png" alt="PeerHub server Visual Studio project structure top">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/peerhub-p2p-task-sharing/peerhub-04-server-files-bottom.png" data-gallery-caption="Additional server-side structure showing shared views, app settings and program file.">
+                                        <img src="images/Projects/peerhub-p2p-task-sharing/peerhub-04-server-files-bottom.png" alt="PeerHub server Visual Studio project structure bottom">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/peerhub-p2p-task-sharing/peerhub-05-worker-connectivity.png" data-gallery-caption="Peer worker client tests connectivity and confirms the server is reachable.">
+                                        <img src="images/Projects/peerhub-p2p-task-sharing/peerhub-05-worker-connectivity.png" alt="PeerWorker client server connectivity test">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/peerhub-p2p-task-sharing/peerhub-06-job-submitted.png" data-gallery-caption="Worker client submits a Python job to its mailbox and logs the queued job result.">
+                                        <img src="images/Projects/peerhub-p2p-task-sharing/peerhub-06-job-submitted.png" alt="PeerWorker client job submission">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/peerhub-p2p-task-sharing/peerhub-07-dashboard-updated-peers.png" data-gallery-caption="Dashboard refresh shows connected peers and updated last-seen status after worker activity.">
+                                        <img src="images/Projects/peerhub-p2p-task-sharing/peerhub-07-dashboard-updated-peers.png" alt="PeerHub dashboard with updated peer list">
+                                    </button>
+                                    <button type="button" data-gallery-image="images/Projects/peerhub-p2p-task-sharing/peerhub-08-worker-client-files.png" data-gallery-caption="Worker client file structure showing API, remoting mailbox, mini job executors and utility classes.">
+                                        <img src="images/Projects/peerhub-p2p-task-sharing/peerhub-08-worker-client-files.png" alt="PeerWorker client Visual Studio file structure">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="key-features-box">
+                                <p class="detail-heading">Feature Walkthrough</p>
+                                <ul>
+                                    <li>ASP.NET Core server registers peer address, port and status information.</li>
+                                    <li>Peer status board displays connected nodes, completed job counts and last-seen timestamps.</li>
+                                    <li>Desktop worker client tests server connectivity and registers as a peer.</li>
+                                    <li>Worker client submits Python jobs to its mailbox.</li>
+                                    <li>IronPython support allows Python job execution inside the .NET worker client.</li>
+                                    <li>Peer data is refreshed through heartbeat/status updates.</li>
+                                    <li>Server and worker client use distributed communication concepts from the assignment.</li>
+                                    <li>Project is prepared for separate GitHub handling later.</li>
+                                </ul>
+                            </div>
+
+                            <div class="source-row private-source-row">
+                                <span>GitHub links pending</span>
+                                <span>Server dashboard and worker client previews shown through screenshots</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- More Projects Coming Soon -->
+                <article class="showcase-card simple-card reveal">
+                    <div class="simple-project-content">
+                        <span class="shipped-label"><span></span> in progress</span>
+                        <p>Additional university, personal and software projects will be added as I continue updating this portfolio.</p>
+                        <h3>More Projects Coming Soon</h3>
+                        <div class="project-tags">
+                            <span>Portfolio Website</span>
+                            <span>Capstone</span>
+                            <span>Cloud Computing</span>
+                            <span>University Projects</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- GitHub -->
+        <section class="section section-shell" id="github">
+            <p class="eyebrow reveal">Open source activity</p>
+            <h2 class="section-title reveal">GitHub Projects</h2>
+            <p class="section-subtitle reveal">Public repositories are linked where available. Some assessed university and group coursework is kept private and shown through screenshots only.</p>
+
+            <div class="github-layout">
+                <article class="github-card reveal">
+                    <div class="github-graph" aria-hidden="true">
+                        <div class="month-labels">
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+                            <span>May</span>
+                            <span>Jun</span>
+                            <span>Jul</span>
+                        </div>
+                        <div class="contribution-grid">
+                            <span></span><span></span><span class="active"></span><span></span><span class="mid"></span><span></span><span></span><span class="active"></span><span class="mid"></span><span></span><span></span><span class="active"></span><span></span><span></span><span class="mid"></span><span class="active"></span><span></span><span></span><span></span><span class="mid"></span><span></span><span class="active"></span><span></span><span></span><span class="mid"></span><span></span><span class="active"></span><span></span><span></span><span></span><span class="mid"></span><span class="active"></span><span></span><span></span><span class="active"></span><span></span><span></span><span class="mid"></span><span></span><span></span><span class="active"></span><span></span>
+                        </div>
+                    </div>
+
+                    <div class="repo-pills">
+                        <a href="https://github.com/VethumPerera/tourist-attractions-android" target="_blank" rel="noopener noreferrer">Tourist Attractions</a>
+                        <a href="https://github.com/VethumPerera/pocket-library-android" target="_blank" rel="noopener noreferrer">PocketLibrary</a>
+                        <span>Coursework previews kept private</span>
+                    </div>
+                </article>
+
+                <aside class="github-side reveal">
+                    <div>
+                        <p>Organizations</p>
+                        <span>@VethumPerera</span>
+                    </div>
+
+                    <div>
+                        <p>Current Focus</p>
+                        <span>Software Engineering Projects</span>
+                    </div>
+
+                    <a href="https://github.com/VethumPerera" target="_blank" rel="noopener noreferrer">View full profile on GitHub ↗</a>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section section-shell" id="contact">
+            <div class="contact-panel reveal">
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let's build something useful.</h2>
+                    <p>I am open to internship opportunities, project collaborations and software development discussions.</p>
+                </div>
+
+                <div class="contact-links">
+                    <a href="mailto:vethump@gmail.com">
+                        <span>Email</span>
+                        <strong>vethump@gmail.com</strong>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/vethum-perera-3b71a5280/" target="_blank" rel="noopener noreferrer">
+                        <span>LinkedIn</span>
+                        <strong>vethum-perera</strong>
+                    </a>
+
+                    <a href="https://github.com/VethumPerera" target="_blank" rel="noopener noreferrer">
+                        <span>GitHub</span>
+                        <strong>github.com/VethumPerera</strong>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section-shell footer-inner">
+            <p>© <span id="currentYear">2026</span> Vethum Perera</p>
+            <p>Built with HTML, CSS and JavaScript.</p>
+            <a href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+
+</body>
+</html>
